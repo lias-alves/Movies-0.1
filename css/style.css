@@ -38,9 +38,9 @@ header{
 }
 
 .bloco-checkbox{
+    display: none;
     width: 1.5cm;
     height: 1cm;
-    border: 1px solid rgb(221, 221, 221);
 }
 
 header .bloco-checkbox input{
@@ -48,21 +48,22 @@ header .bloco-checkbox input{
 }
 
 header .bloco-checkbox div{
+    position: absolute;
     color: var(--cor4);
     font-size: 0.8cm;
     margin-left: 0.5cm;
 }
 
-.checkbox-wrapper p{
+.checkbox-wrapper aside{
+    display: none;
     width: 4.4cm;
     background-color: var(--cor2);
 }
 
 .a-inputt{
-    display: none;
+    display: block;
     color: var(--cor5);
     text-decoration: none;
-    
     padding: 0.3cm;
     font-family: var(--font2);
     font-size: 0.5cm;
@@ -73,10 +74,9 @@ header .bloco-checkbox div{
 .a-inputt.activo{
     color: var(--cor4);
     background-color: var(--cor1);
-
 }
 
-input:checked + .checkbox-wrapper .a-inputt{
+input:checked + .checkbox-wrapper aside{
     display: block;
 }
 
@@ -127,7 +127,7 @@ header nav a.activo{
 }
 
 .conteiner-principal div button{
-    width: 6cm;
+    width: 5.2cm;
     height: 1.2cm;
     margin-right: 0.3cm;
     font-size: 0.5cm;
@@ -147,7 +147,81 @@ header nav a.activo{
     margin-right: 0.2cm;
 }
 
-@media(max-width: 800px){
+
+/*--- Contenedor Pricipal_e_flachas----*/
+
+.peliculas-recomendadas{
+    margin-bottom: 70px;
+}
+
+.peliculas-recomendadas .contenedor-principal{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-izquierda,
+.peliculas-recomendadas .contenedor-principal .flecha-derecha{
+    position: absolute;
+    border: none;
+    background: rgba(0,0,0,0.3);
+    font-size: 40px;
+    height: 50%;
+    top: calc(50% - 25%);
+    line-height: 40px;
+    width: 50px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 500;
+    transition: .2s ease all;
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-izquierda:hover,
+.peliculas-recomendadas .contenedor-principal .flecha-derecha:hover{
+    background: rgba(0,0,0, .9);
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-izquierda{
+    left: 0;
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-derecha{
+    right: 0;
+}
+
+/*----  Carousel  ----*/
+
+.peliculas-recomendadas .contenedor-carousel{
+    width: 100%;
+    padding: 20px 0;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+.peliculas-recomendadas .contenedor-carousel .carousel{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.peliculas-recomendadas .contenedor-carousel .carousel .pelicula{
+    min-width: 20%;
+    transition: .3s ease all;
+    box-shadow: 5px 5px 10px rgb(0,0,0, .3);
+    margin-right: 0.2cm;
+}
+
+.peliculas-recomendadas .contenedor-carousel .carousel .pelicula.hover{
+     transform: scale(1.2);
+     transform-origin: center;
+}
+
+.peliculas-recomendadas .contenedor-carousel .carousel .pelicula img{
+    width: 100%;
+    vertical-align: top;
+}
+
+
+@media screen and (max-width: 800px){
     header nav a{
         display: none;
     }
@@ -156,4 +230,11 @@ header nav a.activo{
         max-width: 100%;
     }
 
+    .bloco-checkbox{
+        display: block;
+    }
+
+    .peliculas-recomendadas .contenedor-carousel .carousel .pelicula{
+        min-width: 30%;
+    }
 }
