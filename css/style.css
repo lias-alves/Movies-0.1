@@ -107,12 +107,13 @@ header nav a.activo{
 /*---  conteiner-principal  ---*/
 .conteiner-principal{
     display: flex;
-    background: blueviolet url('../filmes/arrow-1.jpg') top center no-repeat;
+    background: url('../filmes/arrow-1.jpg') top center no-repeat;
     background-size: cover;
     height: 65vh;
     align-items: center;
     padding-left: 1cm;
     margin-bottom: 0.6cm;
+    box-shadow: inset 0px -38px 30px var(--cor1);
 }
 
 .conteiner-principal div h3{
