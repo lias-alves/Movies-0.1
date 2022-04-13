@@ -217,7 +217,6 @@ header nav a.activo{
 
 .peliculas-recomendadas .contenedor-carousel .carousel .pelicula{
     min-width: 20%;
-    height: 6cm;
     margin-right: 0.1cm;
     transition: .3s ease all;
     box-shadow: 5px 5px 10px rgb(0,0,0, .3);
@@ -292,7 +291,6 @@ header nav a.activo{
 
 .peliculas-recomendadasb .contenedor-carouselb .carouselb .peliculab{
     min-width: 20%;
-    height: 6cm;
     margin-right: 0.1cm;
     transition: .3s ease all;
     box-shadow: 5px 5px 10px rgb(0,0,0, .3);
