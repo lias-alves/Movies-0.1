@@ -27,6 +27,7 @@ body{
     font-size: var(2);
     background: var(--cor1);
     font-family: var(--font2);
+    position: relative;
 }
     /*--- cabesalho --*/
 header{
@@ -107,7 +108,9 @@ header nav a.activo{
 /*---  conteiner-principal  ---*/
 .conteiner-principal{
     display: flex;
-    background: url('../filmes/arrow-1.jpg') top center no-repeat;
+    background-image: url(../filmes/vikings-1.png);
+    background-position: top center;
+    background-repeat: no-repeat;
     background-size: cover;
     height: 65vh;
     align-items: center;
@@ -367,11 +370,11 @@ header nav a.activo{
 
 .peliculas-recomendadasc .contenedor-carouselc .carouselc .peliculac{
     min-width: 20%;
-    height: 6cm;
     margin-right: 0.1cm;
     transition: .3s ease all;
     box-shadow: 5px 5px 10px rgb(0,0,0, .3);
 }
+
 
 .peliculas-recomendadasc .contenedor-carouselc .carouselc .peliculac.hover{
      transform: scale(1.2);
@@ -383,6 +386,83 @@ header nav a.activo{
     height: 100%;
     vertical-align: top;
 }
+
+/*--- lista de filmes 4 ------*/
+/*--- Contenedor Pricipal_e_flachas----*/
+
+.peliculas-recomendadasd{
+    margin-bottom: 5px;
+}
+
+.peliculas-recomendadasd .contenedor-principald{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.peliculas-recomendadasd .contenedor-principald .flecha-izquierdad,
+.peliculas-recomendadasd .contenedor-principald .flecha-derechad{
+    position: absolute;
+    border: none;
+    background: rgba(0,0,0,0.3);
+    font-size: 40px;
+    height: 50%;
+    top: calc(50% - 25%);
+    line-height: 40px;
+    width: 50px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 500;
+    transition: .2s ease all;
+}
+
+.peliculas-recomendadasd .contenedor-principald .flecha-izquierdad:hover,
+.peliculas-recomendadasd .contenedor-principald .flecha-derechad:hover{
+    background: rgba(0,0,0, .9);
+}
+
+.peliculas-recomendadasd .contenedor-principald .flecha-izquierdad{
+    left: 0;
+}
+
+.peliculas-recomendadasd .contenedor-principald .flecha-derechad{
+    right: 0;
+}
+
+/*----  Carousel  ----*/
+
+.peliculas-recomendadasd .contenedor-carouseld{
+    width: 100%;
+    padding: 20px 0;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+.peliculas-recomendadasd .contenedor-carouseld .carouseld{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.peliculas-recomendadasd .contenedor-carouseld .carouseld .peliculad{
+    min-width: 20%;
+    height: 6cm;
+    margin-right: 0.1cm;
+    transition: .3s ease all;
+    box-shadow: 5px 5px 10px rgb(0,0,0, .3);
+}
+
+.peliculas-recomendadasd .contenedor-carouseld .carouseld .peliculad.hover{
+     transform: scale(1.2);
+     transform-origin: center;
+}
+
+.peliculas-recomendadasd .contenedor-carouseld .carouseld .peliculad img{
+    width: 100%;
+    height: 100%;
+    
+}
+
+
 
 
 @media screen and (max-width: 800px){
@@ -425,8 +505,18 @@ header nav a.activo{
     /*--- Contenedor Pricipal_e_flachas----*/
     .peliculas-recomendadas .contenedor-principal .flecha-izquierda,
     .peliculas-recomendadas .contenedor-principal .flecha-derecha,
+          /*-- listas de filme 2  ---*/
+    /*--- Contenedor Pricipal_e_flachas----*/
     .peliculas-recomendadasb .contenedor-principalb .flecha-izquierdab,
-    .peliculas-recomendadasb .contenedor-principalb .flecha-derechab{
+    .peliculas-recomendadasb .contenedor-principalb .flecha-derechab,
+           /*-- listas de filme 3  ---*/
+    /*--- Contenedor Pricipal_e_flachas----*/
+    .peliculas-recomendadasc .contenedor-principalc .flecha-izquierdac,
+    .peliculas-recomendadasc .contenedor-principalc .flecha-derechac,
+    /*-- listas de filme  4 ---*/
+    /*--- Contenedor Pricipal_e_flachas----*/
+    .peliculas-recomendadasd .contenedor-principald .flecha-izquierdad,
+    .peliculas-recomendadasd .contenedor-principald .flecha-derechad{
         font-size: 20px;
         height: 37%;
         width: 20px;
@@ -439,10 +529,13 @@ header nav a.activo{
         font-size: 3vw;
     }
 
+   
     .peliculas-recomendadas .contenedor-carousel .carousel .pelicula,
-    .peliculas-recomendadasb .contenedor-carouselb .carouselb .peliculab{
-        min-width: 100px;
-        height: 150px;
+    .peliculas-recomendadasb .contenedor-carouselb .carouselb .peliculab,
+    .peliculas-recomendadasc .contenedor-carouselc .carouselc .peliculac,
+    .peliculas-recomendadasd .contenedor-carouseld .carouseld .peliculad{
+        width: 100px;
+        height: 130px;
         transition: .1s ease all;
     }
 

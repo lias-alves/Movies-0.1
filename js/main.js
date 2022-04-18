@@ -20,6 +20,14 @@ const flechaIzquierdac = document.getElementById('flecha-izquierdac');
 const flechaDerechac = document.getElementById('flecha-derechac');
 
 
+//----lista 4
+const filad = document.querySelector('.contenedor-carouseld');
+const peliculasd = document.querySelectorAll('.peliculad');
+
+const flechaIzquierdad = document.getElementById('flecha-izquierdad');
+const flechaDerechad = document.getElementById('flecha-derechad');
+
+
 // ? ---- flecha derecha  lista 1-------
 flechaDerecha.addEventListener('click', () => {
      fila.scrollLeft += fila.offsetWidth;
@@ -37,18 +45,27 @@ flechaDerechab.addEventListener('click', () => {
     filab.scrollLeft += filab.offsetWidth;
 });
 
-// ? ----  flecha izquierda  lista 2 -------
 flechaIzquierdab.addEventListener('click', () => {
    filab.scrollLeft -= filab.offsetWidth;
 });
 
 
-// ? ---- flecha derecha lista 2  -------
+// ? ---- flecha lista 3  -------
 flechaDerechac.addEventListener('click', () => {
     filac.scrollLeft += filac.offsetWidth;
 });
 
-// ? ----  flecha izquierda  lista 2 -------
+
 flechaIzquierdac.addEventListener('click', () => {
    filac.scrollLeft -= filac.offsetWidth;
+});
+
+// ? ---- flecha lista 4  -------
+flechaDerechad.addEventListener('click', () => {
+    filad.scrollLeft += filad.offsetWidth;
+});
+
+
+flechaIzquierdad.addEventListener('click', () => {
+   filad.scrollLeft -= filad.offsetWidth;
 });
