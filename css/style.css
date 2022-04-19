@@ -108,7 +108,7 @@ header nav a.activo{
 /*---  conteiner-principal  ---*/
 .conteiner-principal{
     display: flex;
-    background-image: url(../filmes/vikings-1.png);
+    background-image: url(../filmes/Arrow-1.jpg);
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -116,7 +116,7 @@ header nav a.activo{
     align-items: center;
     padding-left: 1cm;
     margin-bottom: 0.6cm;
-    box-shadow: inset 0px -38px 30px var(--cor1);
+    box-shadow: inset 0px -38px 30px rgba(22, 22, 22, 0.979);
 }
 
 .conteiner-principal div h3{
@@ -464,8 +464,7 @@ header nav a.activo{
 
 
 
-
-@media screen and (max-width: 800px){
+                                                                      @media screen and (max-width: 800px){
     header{
         justify-content: flex-start;
     }
