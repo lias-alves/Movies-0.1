@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+aside{
+    background: url(../filmes/os-incriveis.png) center center no-repeat fixed;
+    background-size: cover;
+    height: 70vh;
+}
+
+article{
+    margin-left: 1.2cm;
+}
