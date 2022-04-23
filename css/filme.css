@@ -6,7 +6,7 @@
 }
 
 :root{
-    --cor1: #383838;
+    --cor1: #383838d0;
     --cor2: #ffffff;
     --cor3: #00c50a;
     --cor4: rgba(255, 255, 255, 0.651);
@@ -23,8 +23,6 @@ body{
 
 aside{
     background-color: rgb(236, 233, 33);
-    background: url(../filmes/os-incriveis.png) center center no-repeat fixed;
-    background-size: cover;
     height: 70vh;
 }
 
@@ -41,6 +39,15 @@ article h1{
 article p b{
     color: var(--cor3);
     margin-bottom: 1cm;
+    margin-right: 0.1cm;
+}
+
+article p sup{
+    font-size: 0.3cm;
+    font-weight: bold;
+    background-color: var(--cor4);
+    padding: 0.1cm;
+    border-radius: 0.1cm;
 }
 
 article h3{
@@ -67,9 +74,15 @@ article div button{
     font-weight: bolder;
     text-align: center;
     color: var(--cor2);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.856), rgba(78, 78, 78, 0.945));
+    background-image: linear-gradient(to left, var(--cor2), black);
     border-radius: 0.5cm;
     border: 0;
+    cursor: pointer;
+}
+
+article div button:hover{
+    color: red;
+    background-color: var(--cor4);
 }
 
 @media(max-width: 600px){
