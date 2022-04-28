@@ -26,6 +26,25 @@ aside{
     height: 70vh;
 }
 
+aside div{
+    display: flex;
+    padding: 0.5cm;
+    justify-content: space-between;
+}
+
+aside div i{
+    color: white;
+    font-size: 0.7cm;
+}
+
+aside div i:hover{
+    color: red;
+}
+
+aside div span{
+    display: inline-block;
+}
+
 article{
     margin-left: 1.2cm;
     margin-top: 1.3cm;
@@ -92,5 +111,9 @@ article div button:hover{
 
     article div{
         width: 100%;
+    }
+
+    article div button{
+        width: 5.5cm;
     }
 }
